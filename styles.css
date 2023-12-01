@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./imagenes/fondo.jpg);
+
+}
+
+.barra_fija {
+    width: 100%;
+    height: 100px;
+    background-color: #094293;
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.nombre_pag {
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    font-family: 'Times New Roman';
+    text-align: center;
+
+}
+
+.registro {
+    margin-top: 40px;
+    width: 50%;
+    background-color: #6e7bf1;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px; 
+
+}
+
+.boton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boton_agendar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 30%;
+    border-radius: 0.5vmax;
+    background-color: #094293;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    font-family: 'Times New Roman';
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+.boton_agendar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.imagen_principal {
+    background-image: url(/imagenes/verterinaria.jpg);
+    margin-bottom: 40px;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.footer {
+    background-color: #094293;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-info {
+    font-size: 20px;
+    color: white;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+}
