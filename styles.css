@@ -8,20 +8,61 @@ body {
     margin: 0;
 }
 
+.alert-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #105fcf;
+    padding: 20px;
+    border: 2px solid #002457;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+.alert-content {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.alert-buttons {
+    text-align: right;
+}
+
+.alert-button {
+    padding: 10px 20px;
+    background-color: #094293;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-top: 3%;
+    color: white;
+}
+
+
+
 .contenedor {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: auto;
     align-items: center;
     justify-content: center;
-    background-image: url(./fondo.jpg);
+    background-image: url(./imagenes/fondo.jpg);
 
 }
 
 .barra_fija {
     width: 100%;
-    height: 100px;
+    height: auto;
+    padding: 25px;
     background-color: #094293;
     position: fixed;
     display: flex;
@@ -33,7 +74,7 @@ body {
 .nombre_pag {
     width: 100%;
     color: white;
-    font-size: 30px;
+    font-size: 38px;
     letter-spacing: 0.1em;
     font-family: 'Times New Roman';
     text-align: center;
@@ -41,14 +82,15 @@ body {
 }
 
 .registro {
-    margin-top: 40px;
+    margin-top: 200px;
+    margin-bottom: 100px;
     width: 50%;
     background-color: #6e7bf1;
-    height: 650px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 15px; 
+    border-radius: 15px;
 
 }
 
@@ -68,28 +110,30 @@ body {
     color: white;
     font-weight: bold;
     padding: 15px;
-    font-size: 25px;
+    font-size: 35px;
     cursor: pointer;
     font-family: 'Times New Roman';
     transition: transform 0.2s, box-shadow 0.2s;
 
 }
+
 .boton_agendar:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .imagen_principal {
-    background-image: url(./verterinaria.jpg);
+    background-image: url(./imagenes/verterinaria.jpg);
     margin-bottom: 40px;
     width: 300px;
     height: 400px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 15px; 
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .footer {
     background-color: #094293;
     padding: 20px;
@@ -107,3 +151,152 @@ body {
     color: white;
     margin-left: 5px;
 }
+
+.titulo_formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-family: 'Times New Roman';
+    color: white;
+    font-size: 38px;
+
+}
+
+.formulario {
+    display: none;
+    width: 80%;
+    margin: 20px auto;
+
+}
+
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 28px;
+    font-family: 'Times New Roman';
+
+}
+
+.formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 28px;
+    color: grey;
+    font-family: 'Times New Roman';
+
+
+}
+
+
+.formulario input[type="date"],
+.formulario input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 28px;
+    color: grey;
+    font-family: 'Times New Roman';
+
+}
+
+.formulario button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #094293;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman';
+
+}
+
+.formulario button:hover {
+    background-color: #063161;
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.filtrar {
+    height: 200px;
+    width: 20%;
+    background-color: #094293;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-family: 'Times New Roman';
+    color: white;
+    text-align: center;
+    font-size: 32px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.cont_card {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    width: 50%;
+    background-color: #6e7bf1;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 100px 15%;
+
+}
+
+
+#cards {
+
+    background-color: white;
+    height: auto;
+    display: grid;
+    gap: 50px;
+    padding: 100px 15%;
+    text-align: center;
+  }
+  
+  #cards tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #cards tr > * {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+  }
+  
+  #cards button {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  #cards button:hover {
+    background-color: #0056b3;
+  }

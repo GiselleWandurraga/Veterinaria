@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,20 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="./javascript.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="alert-container" id="alert">
+        <div id="alert-content"></div>
+        <div class="alert-buttons">
+            <button class="alert-button" onclick="closeAlert()">Aceptar</button>
+        </div>
+    </div>
     <div class="barra_fija">
-            <h1 class="nombre_pag" href="">Paws & Claws Veterinary Clinic</h1>
+        <h1 class="nombre_pag" href="">Paws & Claws Veterinary Clinic</h1>
     </div>
     <div class="contenedor">
-<div class="registro">
-    <div class="boton">
-        <button class="boton_agendar" onclick="Agendar()">Agendar Cita</button>
-    </div>
-    <div class="boton">
-        <div class="imagen_principal"></div>
-    </div>
+        <div class="registro">
+            <div class="informacion">
+                <div class="boton">
+                    <button class="boton_agendar" onclick="Agendar()">Agendar Cita</button>
+                </div>
+                <div class="boton">
+                    <div class="imagen_principal"></div>
+                </div>
+            </div>
+            <div class="formulario" style="display: none;">
+                <form id="formularioCita">
+                    <div class="titulo_formulario">
+                        <p>Ingrese los datos</p>
+                    </div>
+                    <input type="text" id="nombre_mascota" name="nombre_mascota" placeholder="Nombre de la mascota" required><br>
+                    <input type="text"id="propietario" name="propietario" placeholder="Propietario" required><br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required><br>
+                    <div>
+                        <select id="tipoMascota" name ="tipoMascota" required>
+                            <option value="">Selecciona el tipo de mascota</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="ave">Ave</option>
+                            <option value="reptil">Reptil</option>
+                        </select><br>
+                    </div>
+                    <input type="date" id="fecha" min="" required><br>
+                    <input type="time" id="hora" min="08:00" max="18:00" required><br>
+                    <textarea id="sintomas" name="sintomas" placeholder="Síntomas" required></textarea><br>
+                    <button type="button" onclick="registrar()">Agendar</button>
+                    <button type="button" onclick="cancelarAgenda()">Cancelar</button>
+                </form>
+            </div>
+        </div>
+        <div class="filtrar">
+    <input type="radio" id="a" name="opcion" value="Abiertas" required> Abiertas <br>
+    <input type="radio" id="t" name="opcion" value="Terminadas" required> Terminadas <br> 
+    <input type="radio" id="an" name="opcion" value="Anuladas" required> Anuladas            
+</div>
+<div class="cont_card">
+            <div class="cards" id ="cards"></div>
 </div>
     </div>
     <footer class="footer">
@@ -27,5 +68,6 @@
             <p>Correo Electrónico: <a>Paws&ClawsVeterinaryClinic@gmail.com</a></p>
         </div>
     </footer>
+    <script src="./javascript.js"></script>
 </body>
 </html>
