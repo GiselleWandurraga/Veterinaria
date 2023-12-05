@@ -90,7 +90,6 @@ function pintarCitas() {
     cards.innerHTML = "";
 
     datos_mascotas.forEach(cita => {
-        const imagen = ;
         const nombreMascota = cita.nombre_mascota;
         const propietario = cita.propietario;
         const telefono = cita.telefono;
